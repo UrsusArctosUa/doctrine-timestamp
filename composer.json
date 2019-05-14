@@ -16,10 +16,10 @@
         "phpunit/phpunit": "^7.0 || ^8.0"
     },
     "autoload": {
-        "psr-4": {"DoctrineTimestamp\\" : "src/"}
+        "psr-4": {"UrsusArctosUA\\DoctrineTimestamp\\" : "src/"}
     },
     "autoload-dev": {
-        "psr-4": {"DoctrineTimestamp\\Tests\\": "tests/"}
+        "psr-4": {"UrsusArctosUA\\DoctrineTimestamp\\Tests\\": "tests/"}
     },
     "config": {
         "sort-packages": true

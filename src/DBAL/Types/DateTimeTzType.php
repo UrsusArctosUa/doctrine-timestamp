@@ -6,7 +6,7 @@
  * Time: 12:41
  */
 
-namespace DoctrineTimestamp\DBAL\Types;
+namespace UrsusArctosUA\DoctrineTimestamp\DBAL\Types;
 
 use DateTime;
 use DateTimeInterface;
