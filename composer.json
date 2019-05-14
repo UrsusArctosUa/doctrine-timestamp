@@ -1,0 +1,27 @@
+{
+    "name": "ursusarctosua/doctrinetimestamp",
+    "type": "library",
+    "description": "Realisation of timestamp MySQL type for Doctrine",
+    "keywords": ["doctrine", "orm", "mysql", "timestamp"],
+    "license": "",
+    "authors": [
+        {"name": "Dmytro Dubrovny", "email": "dubrovnyd@gmail.com"}
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "doctrine/orm": "^2.6",
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "phpunit/phpunit": "^7.0 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {"DoctrineTimestamp\\" : "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"DoctrineTimestamp\\Tests\\": "tests/"}
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
