@@ -1,5 +1,5 @@
 {
-    "name": "ursusarctosua/doctrinetimestamp",
+    "name": "ursusarctosua/doctrine-timestamp",
     "type": "library",
     "description": "Realisation of timestamp MySQL type for Doctrine",
     "keywords": ["doctrine", "orm", "mysql", "timestamp"],

@@ -83,7 +83,7 @@ class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
         }
 
         $val = DateTime::createFromFormat('U', $value);
-        
+
         if (!$val) {
             throw ConversionException::conversionFailedFormat($value, $this->getName(), 'U');
         }
