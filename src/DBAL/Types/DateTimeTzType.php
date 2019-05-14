@@ -122,15 +122,14 @@ class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
             return $platform->getDateTimeTzTypeDeclarationSQL($fieldDeclaration);
         }
 
-        $sql = 'TIMESTAMP';
         if (empty($fieldDeclaration['notnull'])) {
-            $sql .= ' NULL';
+            return 'TIMESTAMP NULL';
         }
+
         if (empty($fieldDeclaration['default'])) {
-            $sql .= ' DEFAULT CURRENT_TIMESTAMP';
+            return 'TIMESTAMP DEFAULT CURRENT_TIMESTAMP';
         }
 
-        return $sql;
+        return 'TIMESTAMP';
     }
-
 }
