@@ -15,6 +15,9 @@ use Doctrine\DBAL\Types\ConversionException;
 
 class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
 {
+    /**
+     * @inheritdoc
+     */
     public function canRequireSQLConversion()
     {
         return true;
@@ -22,11 +25,6 @@ class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
 
     /**
      * @inheritdoc
-     *
-     * @param \DateTime $value
-     * @param AbstractPlatform $platform
-     *
-     * @return int
      * @throws ConversionException
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
@@ -48,11 +46,6 @@ class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
 
     /**
      * @inheritdoc
-     *
-     * @param string $sqlExpr
-     * @param AbstractPlatform $platform
-     *
-     * @return string
      */
     public function convertToDatabaseValueSQL($sqlExpr, AbstractPlatform $platform)
     {
@@ -65,11 +58,6 @@ class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
 
     /**
      * @inheritdoc
-     *
-     * @param mixed $value
-     * @param AbstractPlatform $platform
-     *
-     * @return DateTimeInterface
      * @throws ConversionException
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
@@ -93,11 +81,6 @@ class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
 
     /**
      * @inheritdoc
-     *
-     * @param string $sqlExpr
-     * @param AbstractPlatform $platform
-     *
-     * @return string
      */
     public function convertToPHPValueSQL($sqlExpr, $platform)
     {
@@ -110,11 +93,6 @@ class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
 
     /**
      * @inheritdoc
-     *
-     * @param array $fieldDeclaration
-     * @param AbstractPlatform $platform
-     *
-     * @return string
      */
     public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform)
     {
@@ -131,5 +109,13 @@ class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
         }
 
         return 'TIMESTAMP';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function requiresSQLCommentHint(AbstractPlatform $platform)
+    {
+        return true;
     }
 }
