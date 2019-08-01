@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Realisation of timestamp MySQL type for Doctrine",
     "keywords": ["doctrine", "orm", "mysql", "timestamp"],
-    "license": "",
+    "license": "proprietary",
     "authors": [
         {"name": "Dmytro Dubrovny", "email": "dubrovnyd@gmail.com"}
     ],
