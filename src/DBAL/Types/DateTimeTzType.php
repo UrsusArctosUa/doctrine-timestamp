@@ -33,7 +33,7 @@ class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
             parent::convertToDatabaseValue($value, $platform);
         }
 
-        if (!($value instanceof DateTimeInterface)) {
+        if (!($value instanceof DateTimeInterface) && !is_null($value)) {
             throw ConversionException::conversionFailedInvalidType(
                 $value,
                 $this->getName(),
@@ -41,7 +41,7 @@ class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
             );
         }
 
-        return $value->getTimestamp();
+        return $value?$value->getTimestamp():null;
     }
 
     /**
