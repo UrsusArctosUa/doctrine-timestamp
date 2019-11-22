@@ -76,7 +76,6 @@ Known bugs
  - Doctrine schema generator generates requests this do nothing when field marked
 as not null. However, it works correctly for nullable fields.
 
-
 [1]: https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/types.html#custom-mapping-types
 [2]: https://getcomposer.org/
 [3]: https://www.doctrine-project.org/
