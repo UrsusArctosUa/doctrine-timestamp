@@ -2,9 +2,6 @@ About
 =====
 
 This is MySQL timestamp type implementation for Doctrine ORM.
- 
-Problem
--------
 
 Using the datetime data type in MySQL may cause a problem when you make a DB
 connection with different [timezones][5]. Instead, the timestamp data type is
